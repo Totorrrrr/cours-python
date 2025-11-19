@@ -55,4 +55,3 @@ def detecter_pics(fichier_csv, seuil_cpu, seuil_mem):
                 })
 
     return pics
-x
