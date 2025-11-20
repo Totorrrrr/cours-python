@@ -1,11 +1,7 @@
 import csv
 
 def calculer_moyennes(fichier_csv):
-    """
-    Lit le fichier CSV et calcule :
-    - CPU moyen, min, max
-    - RAM moyenne, min, max
-    """
+
     cpu_values = []
     mem_values = []
 
@@ -14,14 +10,14 @@ def calculer_moyennes(fichier_csv):
         reader = csv.DictReader(f)
 
         for ligne in reader:
-            # On convertit les valeurs 
+            # Conversion des valeurs 
             cpu = float(ligne["cpu_percent"])
             mem = float(ligne["mem_percent"])
 
             cpu_values.append(cpu)
             mem_values.append(mem)
 
-    # Si le fichier est vide → on évite crash
+
     if not cpu_values:
         return None
 
@@ -36,7 +32,7 @@ def calculer_moyennes(fichier_csv):
     }
 
 
-# Fonction : Détection de pics CPU / RAM
+
 def detecter_pics(fichier_csv, seuil_cpu, seuil_mem):
     pics = []
 

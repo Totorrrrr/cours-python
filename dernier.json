@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-11-20T15:20:31.202168",
+  "systeme": {
+    "os": "Windows",
+    "version": "10.0.26200",
+    "architecture": "AMD64",
+    "hostname": "Victor"
+  },
+  "cpu": {
+    "coeurs_physiques": 8,
+    "coeurs_logiques": 16,
+    "utilisation": 17.3
+  },
+  "memoire": {
+    "total": 16499134464,
+    "disponible": 6284861440,
+    "pourcentage": 61.9
+  },
+  "disques": [
+    {
+      "point_montage": "C:\\",
+      "total": 510770802688,
+      "utilise": 469848158208,
+      "pourcentage": 92.0
+    }
+  ]
+}

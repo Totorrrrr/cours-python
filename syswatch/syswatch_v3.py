@@ -7,11 +7,7 @@ from traitement import calculer_moyennes, detecter_pics
 
 
 def exporter_csv(metriques, fichier):
-    """
-    Ajoute les données dans un fichier CSV.
-    Si le fichier n'existe pas → crée l'en-tête.
-    """
-
+    
     colonnes = [
         "timestamp", "hostname",
         "cpu_percent",
@@ -19,7 +15,7 @@ def exporter_csv(metriques, fichier):
         "disk_root_percent"
     ]
 
-    # Construction de la ligne à écrire
+  
     ligne = {
         "timestamp": metriques["timestamp"],
         "hostname": metriques["systeme"]["hostname"],
@@ -28,9 +24,7 @@ def exporter_csv(metriques, fichier):
 
         "mem_total_gb": metriques["memoire"]["total"] / (1024**3),
         "mem_dispo_gb": metriques["memoire"]["disponible"] / (1024**3),
-        "mem_percent": metriques["memoire"]["pourcentage"],
-
-        # On prend la 1ère partition du disque (C:, /)
+        "mem_percent": metriques["memoire"]["pourcentage"], 
         "disk_root_percent": metriques["disques"][0]["pourcentage"],
     }
 
@@ -117,4 +111,4 @@ if __name__ == "__main__":
         pics = detecter_pics("historique.csv", seuil_cpu=80, seuil_mem=80)
         print("\n=== PICS DÉTECTÉS ===")
         for p in pics:
-            print(p)
+            print(p) 
